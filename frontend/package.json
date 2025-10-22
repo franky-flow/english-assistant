@@ -1,0 +1,20 @@
+{
+  "name": "english-assistant-frontend",
+  "version": "1.0.0",
+  "description": "Frontend for English Assistant - A local web application for Spanish speakers learning English",
+  "main": "js/app.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch",
+    "build": "tailwindcss -i ./css/input.css -o ./css/styles.css --minify",
+    "dev": "tailwindcss -i ./css/input.css -o ./css/styles.css --watch"
+  },
+  "keywords": ["english", "learning", "spanish", "education"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.3.6",
+    "@tailwindcss/forms": "^0.5.7",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32"
+  }
+}
