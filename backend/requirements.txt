@@ -19,6 +19,9 @@ langgraph==0.0.62
 pydantic==2.5.0
 pydantic-settings==2.1.0
 
+# Language detection
+langdetect==1.0.9
+
 # HTTP client and utilities
 httpx==0.25.2
 python-dotenv==1.0.0
