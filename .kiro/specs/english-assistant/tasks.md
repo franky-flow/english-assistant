@@ -64,38 +64,38 @@
     - Add progress tracking with status management
     - _Requirements: 4.1, 4.2, 4.3, 4.5_
 
-- [ ] 5. Create REST API with FastAPI
-  - [ ] 5.1 Set up FastAPI application foundation
+- [x] 5. Create REST API with FastAPI
+  - [x] 5.1 Set up FastAPI application foundation
     - Initialize FastAPI app with CORS middleware and error handling
     - Implement global exception handlers and logging
     - Add request/response validation and formatting
     - _Requirements: 1.1, 2.1, 3.1, 4.1, 5.1_
   
-  - [ ] 5.2 Implement vocabulary API endpoint
+  - [x] 5.2 Implement vocabulary API endpoint
     - Create POST /api/vocabulary endpoint with VocabularyAgent integration
     - Add comprehensive request validation and error handling
     - Implement history storage for vocabulary queries
     - _Requirements: 1.1, 1.2, 1.3, 1.4_
   
-  - [ ] 5.3 Implement writing correction API endpoint
+  - [x] 5.3 Implement writing correction API endpoint
     - Create POST /api/correction endpoint with CorrectionAgent integration
     - Add before/after comparison response formatting
     - Implement history storage for correction queries
     - _Requirements: 2.1, 2.2, 2.3, 2.4_
   
-  - [ ] 5.4 Implement grammar explanation API endpoint
+  - [x] 5.4 Implement grammar explanation API endpoint
     - Create POST /api/grammar endpoint with GrammarAgent integration
     - Add grammar rule categorization in responses
     - Implement history storage for grammar queries
     - _Requirements: 3.1, 3.2, 3.3_
   
-  - [ ] 5.5 Implement phrasal verbs API endpoints
+  - [x] 5.5 Implement phrasal verbs API endpoints
     - Create GET /api/phrasal-verbs endpoint with filtering and sorting
     - Create PUT /api/phrasal-verbs/{id}/progress endpoint for status updates
     - Add comprehensive filtering by difficulty, status, and search terms
     - _Requirements: 4.1, 4.2, 4.3, 4.4_
   
-  - [ ] 5.6 Implement history API endpoint
+  - [x] 5.6 Implement history API endpoint
     - Create GET /api/history endpoint with search and filtering
     - Add section-based filtering and full-text search
     - Implement history editing and management features
