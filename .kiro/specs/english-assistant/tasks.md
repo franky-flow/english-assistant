@@ -20,14 +20,14 @@
     - Add database initialization and seeding scripts
     - _Requirements: 1.3, 2.3, 3.3, 4.5, 5.4_
 
-- [ ] 3. Create core data models and validation
-  - [ ] 3.1 Implement Pydantic models for API contracts
+- [x] 3. Create core data models and validation
+  - [x] 3.1 Implement Pydantic models for API contracts
     - Create BaseResponse, VocabularyResponse, CorrectionResponse, GrammarResponse models
     - Implement request models for all API endpoints
     - Add comprehensive input validation schemas
     - _Requirements: 1.2, 2.2, 3.2, 4.1, 5.1_
   
-  - [ ] 3.2 Create utility classes for data processing
+  - [x] 3.2 Create utility classes for data processing
     - Implement response formatting utilities
     - Create data transformation helpers
     - Add error response standardization
