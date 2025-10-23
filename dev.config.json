@@ -1,0 +1,60 @@
+{
+  "development": {
+    "backend": {
+      "host": "localhost",
+      "port": 8000,
+      "reload": true,
+      "log_level": "info",
+      "workers": 1
+    },
+    "frontend": {
+      "host": "localhost", 
+      "port": 3000,
+      "auto_reload": true,
+      "cors_enabled": true
+    },
+    "database": {
+      "host": "localhost",
+      "port": 5432,
+      "name": "english_assistant_dev",
+      "user": "english_assistant_user",
+      "password": "dev_password"
+    },
+    "models": {
+      "cache_dir": "./models_cache",
+      "preload": false,
+      "cpu_only": true
+    }
+  },
+  "testing": {
+    "backend": {
+      "host": "localhost",
+      "port": 8001,
+      "reload": false,
+      "log_level": "warning"
+    },
+    "frontend": {
+      "host": "localhost",
+      "port": 3001
+    },
+    "database": {
+      "name": "english_assistant_test"
+    }
+  },
+  "scripts": {
+    "dev": "python dev.py both",
+    "dev:backend": "python dev.py backend", 
+    "dev:frontend": "python dev.py frontend",
+    "test": "python -m pytest backend/tests/",
+    "lint": "flake8 backend/ && eslint frontend/js/",
+    "format": "black backend/ && prettier --write frontend/js/",
+    "build:css": "cd frontend && npm run build",
+    "build:dev": "cd frontend && npm run dev"
+  },
+  "urls": {
+    "frontend": "http://localhost:3000",
+    "backend": "http://localhost:8000", 
+    "api_docs": "http://localhost:8000/docs",
+    "health": "http://localhost:8000/health"
+  }
+}

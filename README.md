@@ -93,9 +93,72 @@ GRANT ALL PRIVILEGES ON DATABASE english_assistant TO english_assistant_user;
 
 ## Development
 
-- **Backend**: Run FastAPI development server (to be implemented)
-- **Frontend**: Open `frontend/index.html` in browser or serve with local server
-- **CSS**: Run `npm run dev` in frontend directory for TailwindCSS watch mode
+### Quick Start
+
+```bash
+# Complete setup (first time)
+make setup
+
+# Start development environment
+make dev
+
+# Or start individual servers
+make dev-backend    # Backend API only
+make dev-frontend   # Frontend only
+```
+
+### Development Servers
+
+- **Backend API**: http://localhost:8000
+  - API Documentation: http://localhost:8000/docs
+  - Health Check: http://localhost:8000/health
+- **Frontend**: http://localhost:3000
+- **TailwindCSS**: Auto-rebuilds on file changes
+
+### Development Commands
+
+```bash
+# Setup and installation
+make install        # Install all dependencies
+make setup         # Complete project setup
+
+# Development
+make dev           # Start both servers
+make dev-backend   # Backend API only  
+make dev-frontend  # Frontend only
+
+# Building
+make build         # Build all assets
+make build-css     # Build TailwindCSS
+
+# Testing and quality
+make test          # Run all tests
+make lint          # Run linters
+make format        # Format code
+make check         # Check dependencies
+
+# Utilities
+make clean         # Clean build artifacts
+make help          # Show all commands
+```
+
+### Manual Development
+
+If you prefer to run servers manually:
+
+```bash
+# Backend (Terminal 1)
+cd backend
+python run_server.py
+
+# Frontend (Terminal 2) 
+cd frontend
+python serve.py
+
+# TailwindCSS Watch (Terminal 3)
+cd frontend
+npm run dev
+```
 
 ## License
 
