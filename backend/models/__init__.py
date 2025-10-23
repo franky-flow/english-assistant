@@ -28,6 +28,3 @@ __all__ = [
     "PhrasalVerb", "PhrasalVerbFilters", "PhrasalVerbUpdateRequest", "PhrasalVerbProgress",
     "HistoryEntry", "HistoryFilters", "HistoryResponse"
 ]
-from .database_models import History, PhrasalVerb
-
-__all__ = ['History', 'PhrasalVerb']

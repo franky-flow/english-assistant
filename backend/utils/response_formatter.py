@@ -6,7 +6,7 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional, Union
 from uuid import uuid4
 
-from backend.models.api_models import (
+from models.api_models import (
     BaseResponse, ErrorResponse, SuccessResponse,
     VocabularyResponse, CorrectionResponse, GrammarResponse,
     HistoryEntry, PhrasalVerb
@@ -53,7 +53,7 @@ class ResponseFormatter:
         **kwargs
     ) -> CorrectionResponse:
         """Format writing correction response"""
-        from backend.models.api_models import CorrectionDetail
+        from models.api_models import CorrectionDetail
         
         # Convert correction dictionaries to CorrectionDetail objects
         correction_details = []

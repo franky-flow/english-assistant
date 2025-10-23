@@ -6,10 +6,10 @@ import logging
 import re
 from typing import Dict, List, Optional, Tuple, Any
 
-from backend.models.api_models import CorrectionRequest, CorrectionResponse
-from backend.utils.model_manager import get_model_manager
-from backend.utils.response_formatter import ResponseFormatter, DataTransformer
-from backend.utils.error_handler import ModelErrorHandler
+from models.api_models import CorrectionRequest, CorrectionResponse
+from utils.model_manager import get_model_manager
+from utils.response_formatter import ResponseFormatter, DataTransformer
+from utils.error_handler import ModelErrorHandler
 
 
 class CorrectionAgent:

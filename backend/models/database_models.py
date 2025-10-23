@@ -8,7 +8,7 @@ from sqlalchemy import Column, Integer, String, Text, DateTime, ARRAY, JSON, Che
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.sql import func
 
-from backend.utils.database import Base
+from utils.database import Base
 
 
 class History(Base):

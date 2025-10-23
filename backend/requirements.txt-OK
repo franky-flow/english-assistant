@@ -11,10 +11,7 @@ alembic==1.14.0
 # AI and NLP dependencies
 transformers==4.46.0
 torch==2.5.0
-sentencepiece==0.2.0  # Required for translation models
-protobuf==4.25.5  # Required for sentencepiece
-sacremoses==0.1.1  # Required for some tokenizers
-language-tool-python==2.8  # Requires Java - see README for installation
+language-tool-python==2.8
 langchain==0.3.2
 langgraph==0.2.34
 

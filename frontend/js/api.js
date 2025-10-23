@@ -257,7 +257,19 @@ class APIClient {
 
     // Health Check
     async healthCheck() {
-        return this.request('/health', { method: 'GET' });
+        // Health endpoint is at root level, not under /api
+        const url = 'http://localhost:8000/health';
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            if (response.ok) {
+                return { success: true, data };
+            } else {
+                throw new APIError(data.message || `HTTP ${response.status}`, response.status, data);
+            }
+        } catch (error) {
+            throw new APIError(CONFIG.ERROR_MESSAGES.NETWORK_ERROR, 0, { originalError: error.message });
+        }
     }
 }
 

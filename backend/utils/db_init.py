@@ -6,8 +6,8 @@ from typing import List, Dict, Any
 
 from sqlalchemy.orm import Session
 
-from backend.utils.database import get_db_session, DatabaseManager
-from backend.models.database_models import History, PhrasalVerb
+from utils.database import get_db_session, DatabaseManager
+from models.database_models import History, PhrasalVerb
 
 logger = logging.getLogger(__name__)
 

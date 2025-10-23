@@ -7,12 +7,12 @@ from datetime import datetime
 from typing import Dict, List, Optional, Any
 import json
 
-from backend.models.api_models import (
+from models.api_models import (
     PhrasalVerb, PhrasalVerbFilters, PhrasalVerbUpdateRequest, 
     PhrasalVerbProgress
 )
-from backend.utils.response_formatter import DataTransformer
-from backend.utils.error_handler import ModelErrorHandler
+from utils.response_formatter import DataTransformer
+from utils.error_handler import ModelErrorHandler
 
 
 class PhrasalVerbAgent:

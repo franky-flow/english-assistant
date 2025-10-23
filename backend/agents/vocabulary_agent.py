@@ -7,10 +7,10 @@ import re
 from typing import Dict, List, Optional, Tuple
 from langdetect import detect, DetectorFactory
 
-from backend.models.api_models import VocabularyRequest, VocabularyResponse
-from backend.utils.model_manager import get_model_manager
-from backend.utils.response_formatter import ResponseFormatter, DataTransformer
-from backend.utils.error_handler import ModelErrorHandler
+from models.api_models import VocabularyRequest, VocabularyResponse
+from utils.model_manager import get_model_manager
+from utils.response_formatter import ResponseFormatter, DataTransformer
+from utils.error_handler import ModelErrorHandler
 
 
 # Set seed for consistent language detection

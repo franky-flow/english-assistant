@@ -11,7 +11,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.pool import QueuePool
 
-from backend.config import settings
+from config import settings
 
 # Configure logging
 logger = logging.getLogger(__name__)

@@ -17,8 +17,8 @@ from transformers import (
 )
 from language_tool_python import LanguageTool
 
-from backend.config import settings
-from backend.utils.error_handler import ModelErrorHandler
+from config import settings
+from utils.error_handler import ModelErrorHandler
 
 
 class ModelManager:
@@ -161,13 +161,23 @@ class ModelManager:
         pipeline_task = task or config.get("task", "text2text-generation")
         
         try:
-            pipe = pipeline(
-                pipeline_task,
-                model=model,
-                tokenizer=tokenizer,
-                device=-1,  # CPU only
-                return_full_text=False
-            )
+            # Create pipeline without return_full_text for translation models
+            if config["type"] == "translation":
+                pipe = pipeline(
+                    pipeline_task,
+                    model=model,
+                    tokenizer=tokenizer,
+                    device=-1  # CPU only
+                )
+            else:
+                pipe = pipeline(
+                    pipeline_task,
+                    model=model,
+                    tokenizer=tokenizer,
+                    device=-1,  # CPU only
+                    return_full_text=False
+                )
+            
             
             self.pipelines[model_key] = pipe
             self.logger.info(f"Pipeline created for {model_key}")

@@ -46,6 +46,7 @@ english-assistant/
 - Python 3.8+
 - Node.js 16+
 - PostgreSQL 12+
+- Java 8+ (optional, for LanguageTool grammar checking)
 
 ### Backend Setup
 
@@ -90,6 +91,26 @@ GRANT ALL PRIVILEGES ON DATABASE english_assistant TO english_assistant_user;
 ```
 
 2. Run database migrations (to be implemented in Task 2)
+
+### Java Installation (Optional)
+
+For enhanced grammar checking with LanguageTool:
+
+**Ubuntu/Debian:**
+```bash
+sudo apt update
+sudo apt install default-jdk
+```
+
+**macOS:**
+```bash
+brew install openjdk
+```
+
+**Windows:**
+Download and install from [Oracle JDK](https://www.oracle.com/java/technologies/downloads/) or [OpenJDK](https://openjdk.org/)
+
+**Note:** The application will work without Java, but grammar correction will use AI models only.
 
 ## Development
 

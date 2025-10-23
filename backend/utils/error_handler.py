@@ -11,7 +11,7 @@ from uuid import uuid4
 from fastapi import HTTPException, Request
 from fastapi.responses import JSONResponse
 
-from backend.models.api_models import ErrorResponse
+from models.api_models import ErrorResponse
 
 
 class ErrorHandler:
